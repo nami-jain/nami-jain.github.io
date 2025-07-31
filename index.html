@@ -174,11 +174,62 @@
             font-weight: 300;
         }
 
-        .about, .projects, .travel {
+        .about, .projects, .travel, .contact {
             background: #faf8f3;
             margin: 2rem 0;
             color: #6b4c72;
             font-weight: 300;
+        }
+
+        /* Side Quests Grid */
+        .side-quests-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quest-item {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .quest-image {
+            flex: 0 0 200px;
+        }
+
+        .image-placeholder {
+            width: 200px;
+            height: 150px;
+            background: #f0ede6;
+            border: 2px dashed #d4c4a8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            color: #6b4c72;
+            font-weight: 300;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .quest-content {
+            flex: 1;
+        }
+
+        .quest-content h3 {
+            font-size: 1.3rem;
+            color: #4a2c5a;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .quest-content p {
+            color: #6b4c72;
+            font-weight: 300;
+            line-height: 1.6;
         }
 
         /* Footer */
@@ -215,6 +266,16 @@
                 font-size: 2rem;
             }
             
+            .quest-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .quest-image {
+                flex: none;
+                align-self: center;
+            }
+            
             section {
                 padding: 2rem 1rem;
             }
@@ -228,9 +289,9 @@
             <div class="logo">nami jain</div>
             <ul class="nav-links">
                 <li><a href="#home">About Me</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#side-quests">Side Quests</a></li>
                 <li><a href="#travel">Travel</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
     </header>
@@ -250,16 +311,56 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="about">
-            <h2>Experience</h2>
-            <p>Write about your professional experience, work history, skills, and career highlights here.</p>
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>Get in touch! Add your email, social media links, or contact form here.</p>
         </section>
 
         <!-- Side Quests Section -->
         <section id="side-quests" class="projects">
             <h2>Side Quests</h2>
-            <p>Share your personal projects, hobbies, creative endeavors, and passion projects here.</p>
+            <div class="side-quests-grid">
+                <div class="quest-item">
+                    <div class="quest-image">
+                        <div class="image-placeholder">Marathon photo</div>
+                    </div>
+                    <div class="quest-content">
+                        <h3>Running a Marathon!</h3>
+                        <p>Add details about your marathon experience - training, race day, what motivated you, and how it felt to cross the finish line.</p>
+                    </div>
+                </div>
+                
+                <div class="quest-item">
+                    <div class="quest-image">
+                        <div class="image-placeholder">Business photo</div>
+                    </div>
+                    <div class="quest-content">
+                        <h3>Running a Small Business!</h3>
+                        <p>Share your entrepreneurial journey - what kind of business, challenges you faced, lessons learned, and successes achieved.</p>
+                    </div>
+                </div>
+                
+                <div class="quest-item">
+                    <div class="quest-image">
+                        <div class="image-placeholder">Scuba photo</div>
+                    </div>
+                    <div class="quest-content">
+                        <h3>Getting Scuba Dive Certified</h3>
+                        <p>Describe your underwater adventures - where you got certified, favorite dive spots, marine life you've encountered, and what draws you to diving.</p>
+                    </div>
+                </div>
+                
+                <div class="quest-item">
+                    <div class="quest-image">
+                        <div class="image-placeholder">Study abroad photo</div>
+                    </div>
+                    <div class="quest-content">
+                        <h3>Study Abroad</h3>
+                        <p>Tell about your international experience - which country, what you studied, cultural experiences, personal growth, and memorable moments.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Travel Section -->
